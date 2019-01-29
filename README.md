@@ -1,4 +1,4 @@
-# Ahly-Club-UWP
+# Ahly Club
 Universal Windows Platform (UWP) application to follow all Ahly Egypt club news.
 
 All files and lines of codes in this project are published for training purpose only. and it is not authorized for commercial use.
