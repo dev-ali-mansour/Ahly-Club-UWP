@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="AhlyClub.AhlyVideos"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AhlyClub"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+mc:Ignorable="d" FlowDirection="RightToLeft" Loaded="Page_Loaded">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="MobileDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <ScrollViewer>
+        <RelativePanel>
+            <ProgressRing x:Name="ProgRing"
+                          Height="50"
+                          Width="50"
+                          Margin="10,10,10,10"
+                          RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+            <GridView x:Name="VideoGridView"
+                      IsItemClickEnabled="True"
+                      ItemClick="VideoGridView_ItemClick">
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="10,10,10,10">
+                            <TextBlock Text="{Binding Title}"
+                                       Style="{StaticResource NewsTitleTextBlockStyle}"/>
+                            <TextBlock Text="{Binding Date}"
+                                       Style="{StaticResource NewsDateTextBlockStyle}"/>
+                            <RelativePanel>
+                                <Image Source="{Binding Image}"
+                               Style="{StaticResource NewsImageStyle}"/>
+                            </RelativePanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+        </RelativePanel>
+    </ScrollViewer>
+</Page>

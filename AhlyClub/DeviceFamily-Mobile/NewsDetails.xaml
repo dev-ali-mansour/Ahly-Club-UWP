@@ -1,0 +1,28 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AhlyClub"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Universal="using:Microsoft.AdMediator.Universal"
+    x:Class="AhlyClub.NewsDetails"
+    mc:Ignorable="d">
+
+    <!-- Mobile View -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+            <WebView x:Name="NewsWebView"/>
+        <RelativePanel Grid.Row="1"
+                       Margin="0,10,0,10">
+            <Universal:AdMediatorControl x:Name="AdMediator_AB5FA4" 
+                                         Id="AdMediator-Id-4034F8D5-D90B-4717-9DD0-12B713952922" 
+                                         Width="480"
+                                         Height="80"
+                                         RelativePanel.AlignHorizontalCenterWithPanel="True"
+                                         RelativePanel.AlignBottomWithPanel="True"/>
+        </RelativePanel>
+    </Grid>
+</Page>

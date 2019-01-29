@@ -1,0 +1,40 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AhlyClub"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Universal="using:Microsoft.AdMediator.Universal"
+    x:Class="AhlyClub.VideoShow"
+    mc:Ignorable="d">
+
+    <!--MobileView-->
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="MobileDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <RelativePanel>
+            <WebView x:Name="VideoWebView"
+				     RelativePanel.AlignHorizontalCenterWithPanel="True"
+                     Width="840"
+                     Height="250"/>
+        </RelativePanel>
+        <RelativePanel Grid.Row="1"
+                       Margin="0,10,0,10">
+            <Universal:AdMediatorControl x:Name="AdMediator_E8FB73" 
+                                         Id="AdMediator-Id-3C5D6C89-CE75-4AAD-999A-8A6C0CCFC914" 
+                                         Width="480"
+                                         Height="80"
+                                         RelativePanel.AlignHorizontalCenterWithPanel="True"
+                                         RelativePanel.AlignBottomWithPanel="True"/>
+        </RelativePanel>
+    </Grid>
+</Page>
