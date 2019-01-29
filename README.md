@@ -7,7 +7,7 @@ To use this solution you need:
 
 Microsoft Visual Studio 2017
 - DotNETFramework Version=v4.6.1 or above
--Windows 10 SDK
+- Windows 10 SDK
 
 How to use this solution?
 - Download or clone it from this github repository.
